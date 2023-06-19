@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ecommerce-product-page</title>  <link rel="icon" href="/images/favicon-32x32.pngs">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+       <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="icon" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+       <link rel="stylesheet" href="css.css" />
+    <script src="javascript.js" defer></script>
+  </head>
+  <body>
+    <section class="header">  
+      
+          <div id="mySidenav" class="sidenav">
+           <button class="closebtn" onclick="closeNav()" &times;>
+            <img src="./images/icon-close.svg"/>
+          </button> 
+        <ul>
+          <li><a href="#">Collections </a></li>
+          <li><a href="#">Men </a></li>
+          <li><a href="#">Women </a></li>
+          <li><a href="#">About </a></li>
+          <li><a href="#">Contact </a></li>
+        </ul>
+      </div>
+      <div class="me">
+      <img src="./images/icon-menu.svg" onclick="openNav()"/>
+      </div>
+      <div class="logo">
+        <img src="./images/logo.svg" alt="" />
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#">Collections </a></li>
+          <li><a href="#">Men </a></li>
+          <li><a href="#">Women </a></li>
+          <li><a href="#">About </a></li>
+          <li><a href="#">Contact </a></li>
+        </ul>
+      </div>
+    
+      <div class="avatar">
+        <img src="./images/icon-cart.svg" alt="cart"  id="i"/>
+
+        <img src="./images/image-avatar.png" alt="avatar" class="avt" id="i"  onclick="cart()"/>
+      </div>
+    </section>
+    <section class="sect">
+    <section class="section1">
+       <div class="slideshow-container">
+      <div class="mySlides fade">
+            <img src="./images/image-product-1.jpg" alt="shoe" style="width: 100%"  onclick="openModal()"
+          class="hover-shadow cursor"/>
+      </div>
+   <div class="mySlides fade">
+            <img src="./images/image-product-2.jpg" alt="shoe" style="width: 100%"
+          class="hover-shadow cursor"/>
+      </div>   <div class="mySlides fade">
+            <img src="./images/image-product-3.jpg" alt="shoe" style="width: 100%"
+          class="hover-shadow cursor"/>
+      </div>   <div class="mySlides fade">
+            <img src="./images/image-product-4.jpg" alt="shoe" style="width: 100%" 
+          class="hover-shadow cursor"/>
+      </div>
+         <a class="prev" onclick="plusSlides(-1)"    <i class="fa-solid fa-angle-left"></i>❮</a>
+      <a class="next" onclick="plusSlides(1)">    <i class="fa-solid fa-angle-right"></i></a>
+      </div>
+      <br />
+
+       <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"><img src="./images/image-product-1-thumbnail.jpg"/></span>
+      <span class="dot" onclick="currentSlide(2)"><img src="./images/image-product-2-thumbnail.jpg"  /></span>
+      <span class="dot" onclick="currentSlide(3)">
+      <img src="./images/image-product-3-thumbnail.jpg"/></span>
+          <span class="dot" onclick="currentSlide(4)">
+      <img src="./images/image-product-4-thumbnail.jpg"/></span>
+    </div>
+
+
+    </section>
+
+
+      <section class="section2">
+        <div class="name">
+          <h3>SNEAKER COMPANY</h3>
+        </div>
+        <div class="fall">
+          <h2 style="font-weight: bold">Fall Limited Edition Sneakers</h2>
+        </div>
+        <div class="middletext">
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a urable rubber outer sole, they’ll with stand everything
+            the weather can offer.
+          </p>
+        </div>
+        <div class="num">
+                 <div class="price">
+          <div id="p1"><h4>$125.00</h4></div>
+          <div class="percentage">
+            <h4>50%</h4>
+          </div>
+        </div>
+        <div class="discount">$250.00</div> 
+        </div>
+
+        <div class="buttons">
+          <div class="quantity">
+            <button id="sign" onclick="decrement()">
+              <img src="./images/icon-minus.svg" id="ic" />
+            </button>
+            <h4 id="counting">0</h4>
+            <button id="sign" onclick="increment()"s">
+              <img src="./images/icon-plus.svg" id="ic" />
+            </button>
+          </div>
+          <div class="addtocart">
+            <button id="cart">
+              <img src="./images/icon-cart copy.svg" />
+              <h3 id="a">Add to cart</h3>
+            </button>
+          </div>
+        </div>
+      </section>
+    </section>
+    <div id="dark">
+
+    </div>
+        <!-- <div class="lightbox invisible">
+      <div class="lightbox-container">
+        <button class="close-lightbox"><img src="./images/icon-close.svg" alt="close" onclick="closeModal()" ></button>
+        <img
+          src="./images/image-product-1.jpg"
+          alt="product"
+          class="main-thumbnail invisible-mob"
+        />
+        <div class="preview">
+          <img
+            class="selected"
+            src="./images/image-product-1-thumbnail.jpg"
+            alt=""
+          />
+          <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+          <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+          <img src="./images/image-product-4-thumbnail.jpg" alt="" />
+        </div>
+      </div>
+    </div> -->
+  </body>
+</html>

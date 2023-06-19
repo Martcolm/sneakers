@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --Paleorange: hsl(25, 100%, 94%);
+  --Verydarkblue: hsl(220, 13%, 13%);
+  --Darkgrayishblue: hsla(217, 9%, 45%, 0.697);
+  --Grayishblue: hsl(220, 14%, 75%);
+  --Lightgrayishblue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+}
+section {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--Darkgrayishblue);
+}
+ul {
+  display: flex;
+}
+.header {
+  position: sticky;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 2px var(--Lightgrayishblue) solid;
+  margin: 20px;
+  /* width: 100%;
+ background-color: white;
+  position: fixed;
+  z-index: 2; */
+}
+.menu li {
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100px;
+}
+.menu li:hover {
+  border-bottom: 5px var(--Orange) solid;
+}
+#i {
+  width: 25px;
+  margin-right: 20px;
+}
+.avatar {
+  margin-left: 100px;
+}
+.sect {
+  display: flex;
+}
+button {
+  cursor: pointer;
+}
+.mySlides img {
+  height: 600px;
+  border-radius: 36px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.prev,
+.next {
+  display: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin-top: 100px;
+  margin-left: 40px;
+}
+.dot img {
+  cursor: pointer;
+  height: 100px;
+  width: 108px;
+  border-radius: 15px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: #bbb;
+  transition: background-color 0.6s ease;
+}
+.dot img:hover {
+  border: 3px solid var(--Orange);
+}
+.section1 {
+  width: 50%;
+  height: 100%;
+  margin-left: 30px;
+}
+.section2 {
+  width: 50%;
+  margin-top: 70px;
+  margin-left: 178px;
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  color: var(--Orange);
+  text-align: start;
+  font-size: 10px;
+  margin-top: 50px;
+}
+.fall {
+  margin: 30px 100px 50px 0px;
+  font-size: 30px;
+}
+.middletext {
+  margin: 20px 100px 60px 0px;
+  font-size: 16px;
+  color: var(--Darkgrayishblue);
+}
+.price {
+  display: flex;
+  margin-bottom: 5px;
+}
+#p1 {
+  font-size: 26px;
+}
+.percentage {
+  margin-left: 20px;
+  background-color: var(--Paleorange);
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  border-radius: 6px;
+  color: var(--Orange);
+}
+.discount {
+  color: var(--Darkgrayishblue);
+  text-decoration: line-through;
+  font-size: 14px;
+}
+.buttons {
+  display: flex;
+  margin-top: 60px;
+}
+.quantity {
+  display: flex;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+  /* justify-content: center; */
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 18px;
+  border-radius: 6px;
+  background-color: var(--Lightgrayishblue);
+}
+#sign {
+  border: none;
+  background-color: var(--Lightgrayishblue);
+  font-size: 20px;
+  color: var(--Orange);
+  display: flex;
+  align-items: center;
+}
+.addtocart {
+  margin-left: 20px;
+  display: flex;
+  /* flex-direction: column; */
+  font-size: 10px;
+}
+#cart {
+  display: flex;
+  background-color: var(--Orange);
+  border: none;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  justify-content: center;
+  border-radius: 6px;
+  color: var(--White);
+  font-size: 12px;
+}
+#a {
+  margin-left: 10px;
+}
+
+.lightbox {
+  display: none;
+  position: absolute;
+  /* top: 0;
+  width: 100%; */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.lightbox-container {
+  display: none;
+  position: relative;
+}
+.close-lightbox {
+  position: absolute;
+  top: -40px;
+  right: 10px;
+  color: orange;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.close-lightbox:hover img {
+  filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+}
+.close-lightbox img {
+  width: 20px;
+  height: 20px;
+}
+.lightbox .main-thumbnail {
+  width: 400px;
+}
